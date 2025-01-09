@@ -1,0 +1,21 @@
+<h2>All our Flats <%= "(#{@flats.count})" %></h2>
+<% @flats.each do |flat| %>
+  <h3><%= flat.name %></h3>
+  <p><%= flat.address %></p>
+  <p><%= flat.number_of_guests %></p>
+  <p><%= flat.price_per_night %></p>
+  <%= link_to "More info", flat %>
+<% end %>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="d-flex">
+      <p>Test 1</p>
+      <p class="ms-2">Test 2</p>
+    </div>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
