@@ -1,16 +1,18 @@
-<h2>All our Flats <%= "(#{@flats.count})" %></h2>
-<div class="row justify-content-between">
-  <% @flats.each do |flat| %>
-    <div class="card me-3" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= flat.name %></h5>
-        <p class="card-text"><%= flat.address %></p>
-        <div class="d-flex">
-          <p><%= flat.number_of_guests %></p>
-          <p class="ms-2"><%= flat.price_per_night %></p>
+<div class="container">
+  <h2>All our Flats <%= "(#{@flats.count})" %></h2>
+  <div class="row justify-content-between">
+    <% @flats.each do |flat| %>
+      <div class="card me-3 mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.address %></p>
+          <div class="d-flex">
+            <p><%= flat.number_of_guests %></p>
+            <p class="ms-2"><%= flat.price_per_night %></p>
+          </div>
+          <%= link_to "More info", flat, class: "card-link" %>
         </div>
-        <%= link_to "More info", flat, class: "card-link" %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
